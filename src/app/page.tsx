@@ -9,10 +9,13 @@ export default function Home() {
   
   const fonts = [
     "font-['Pricedown']",
-    "font-['Crackman']",
-    "font-['GameOfThrones']",
+    "font-['MP16']",
+    // "font-['Crackman']",
+    // "font-['GameOfThrones']",
     "font-['KnightWarrior']",
-    "font-['MP16']"
+    "font-['Pricedown']",
+    "font-['MP16']",
+  
   ];
 
   useEffect(() => {
@@ -26,20 +29,36 @@ export default function Home() {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-y-scroll text-white scroll-smooth">
       {/* Landing Section */}
-      <section className="h-screen w-full snap-start snap-always flex flex-col items-center justify-center p-4 sm:p-8 bg-gradient-to-b from-gray-900 to-blue-900">
-        <h1 
-          className={`${fonts[currentFontIndex]} text-6xl sm:text-8xl lg:text-[15vw] font-bold mb-6 text-center leading-tight
-          transition-all duration-500 text-white animate-morph`}
-        >
-          HERTZ 2025
-        </h1>
-        <p className="text-xl sm:text-2xl lg:text-3xl text-center max-w-3xl text-gray-300">
+      <section className="h-screen w-full snap-start snap-always flex flex-col items-center justify-center p-4 sm:p-8 bg-gradient-to-b from-blue-900 to-gray-900">
+        <div className="h-[20vh] sm:h-[25vh] lg:h-[30vh] flex items-center justify-center">
+          <h1 
+            className={`${fonts[currentFontIndex]} text-7xl sm:text-9xl lg:text-[12vw] font-bold text-center leading-none
+            transition-all duration-500 text-white animate-morph whitespace-nowrap
+            [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]`}
+          >
+            HERTZ 2025
+          </h1>
+        </div>
+        
+        {/* Image Container */}
+        <div className="w-[85%] max-w-[900px] mt-4 sm:mt-8 px-4 animate-float">
+          <Image
+            src="/img.webp"
+            alt="Hertz Image"
+            width={900}
+            height={540}
+            className="w-full h-auto object-contain"
+            priority
+          />
+        </div>
+
+        {/* <p className="text-xl sm:text-2xl lg:text-3xl text-center max-w-3xl text-gray-300 mt-8">
           Welcome to the most innovative tech festival of the year
-        </p>
+        </p> */}
       </section>
 
       {/* Cards Section */}
-      <section className="min-h-screen w-full snap-start snap-always flex flex-col items-center justify-center p-4 sm:p-8 bg-gradient-to-b from-blue-900 to-gray-900">
+      <section className="min-h-screen w-full snap-start snap-always flex flex-col items-center justify-center p-4 sm:p-8 bg-gray-900">
         {/* Top Text */}
         <div className="text-center mb-4 sm:mb-8">
           <h2 className="font-['Pricedown'] text-4xl sm:text-5xl md:text-6xl lg:text-[8vw] font-bold mb-6 text-center leading-tight">
@@ -78,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="min-h-screen w-full snap-start snap-always flex flex-col items-start justify-start p-4 sm:p-8 bg-gradient-to-b from-gray-900 to-blue-900">
+      <section className="min-h-screen w-full snap-start snap-always flex flex-col items-start justify-start p-4 sm:p-8 bg-gradient-to-b from-gray-900 to-gray-900">
         <div className="w-full max-w-7xl mx-auto py-12 sm:py-24">
         <h2 className="font-['Pricedown'] text-4xl sm:text-5xl md:text-6xl lg:text-[8vw] font-bold mb-6 text-center leading-tight">
         FAQ</h2>
