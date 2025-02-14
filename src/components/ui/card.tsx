@@ -4,32 +4,35 @@ import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export const EvervaultCard = ({
-  text,
-  className,
-}: {
+// import { useMotionValue } from "framer-motion";
+// import { useEffect, useState } from "react";
+
+interface EvervaultCardProps {
   text?: string;
   className?: string;
-}) => {
-  let mouseX = useMotionValue(0);
-  let mouseY = useMotionValue(0);
+}
 
-  const [randomString, setRandomString] = useState("");
+export const EvervaultCard = ({ text, className }: EvervaultCardProps) => {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const [randomString, setRandomString] = useState<string>("");
 
   useEffect(() => {
-    let str = generateRandomString(1500);
+    const str = generateRandomString(1500);
     setRandomString(str);
   }, []);
 
-  function onMouseMove({ currentTarget, clientX, clientY }: any) {
-    let { left, top } = currentTarget.getBoundingClientRect();
+  function onMouseMove(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    const { currentTarget, clientX, clientY } = event;
+    const { left, top } = currentTarget.getBoundingClientRect();
+    
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
 
     const str = generateRandomString(1500);
     setRandomString(str);
   }
-
   return (
     <div
       className={cn(
@@ -47,10 +50,11 @@ export const EvervaultCard = ({
           randomString={randomString}
         />
         <div className="relative z-10 flex items-center justify-center">
-          <div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
-            <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full" />
-            <span className="font-['Pricedown'] dark:text-white text-black z-20">{text}</span>
-
+          <div className="relative h-44 w-44 sm:h-52 sm:w-52 md:h-64 md:w-64 rounded-full flex items-center justify-center">
+            <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.4] blur-sm rounded-full" />
+            <span className="font-['Pricedown'] dark:text-white text-black z-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+              {text}
+            </span>
           </div>
         </div>
       </div>
@@ -58,10 +62,17 @@ export const EvervaultCard = ({
   );
 };
 
-export function CardPattern({ mouseX, mouseY, randomString }: any) {
-  let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
-  let style = { maskImage, WebkitMaskImage: maskImage };
+import { MotionValue } from "framer-motion"; 
 
+interface CardPatternProps {
+  mouseX: MotionValue<number>;
+  mouseY: MotionValue<number>;
+  randomString: string;
+}
+
+export function CardPattern({ mouseX, mouseY, randomString }: CardPatternProps) {
+  const maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  const style = { maskImage, WebkitMaskImage: maskImage };
   return (
     <div className="pointer-events-none">
       <div className="absolute inset-0 rounded-4xl  [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>

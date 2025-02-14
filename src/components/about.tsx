@@ -28,13 +28,15 @@ export default function AboutSection() {
           <div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
               <div className="text-black text-3xl sm:text-5xl lg:text-[5vw] font-bold leading-tight">05</div>
-              <div className="text-black text-2xl sm:text-4xl lg:text-[3vw] font-bold">About</div>
+              <div className="text-black text-2xl sm:text-4xl lg:text-[3vw] font-bold "><h2 className="font-['Pricedown'] text-4xl sm:text-3xl md:text-4xl lg:text-[8vw] font-bold mb-6 text-center leading-tight">
+            about
+          </h2></div>
             </div>
             <hr className="border-black my-4 sm:my-6" />
           </div>
           <div className="text-black text-sm sm:text-base lg:text-lg relative flex-grow">
-            The Student Expo offers the emerging geniuses and bright young minds a platform. A platform to learn, create, connect, share, and grow. Join us at Tathva '24 for exciting competitions, engaging workshops, insightful lectures, and much more.
-            <div className="text-black font-bold absolute bottom-2 right-3">◻◻◻</div>
+            The Student Expo offers the emerging geniuses and bright young minds a platform. A platform to learn, create, connect, share, and grow. Join us at HERTZ 25 for exciting competitions, engaging workshops, insightful lectures, and much more.
+            {/* <div className="text-black font-bold absolute bottom-2 right-3">◻◻◻</div> */}
           </div>
         </div>
       </div>
@@ -43,10 +45,10 @@ export default function AboutSection() {
       <div className="w-full lg:w-[35%] h-full">
         <div className="w-full h-full p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {[
-            { href: "/drone-racing", text: "Drone Racing", img: "/grid/drone.webp" },
-            { href: "/wheels", text: "Automotive Summit", img: "/grid/red_car.jpg" },
-            { href: "/glitch", text: "Glitch", img: "/grid/arcade.jpg" },
-            { href: "/proshow", text: "Proshow", img: "/grid/concert.webp" }
+            { href: "/drone-racing", text: "1st years expo", img: "/drone.webp" },
+            { href: "/wheels", text: "2nd years expo", img: "/red_car.jpg" },
+            { href: "/glitch", text: "other expo", img: "/arcade.jpg" },
+            { href: "/proshow", text: "elctronics show", img: "/concert.webp" }
           ].map(({ href, text, img }, index) => (
             <Link 
               key={index} 

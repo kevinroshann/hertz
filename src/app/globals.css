@@ -49,12 +49,27 @@ body {
 }
 
 @font-face {
-  font-family: 'MP16';
-  src: url('/fonts/MP16SC.ttf') format('truetype');
+  font-family: 'Hindi';
+  src: url('/fonts/Ananda Namaste Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Japan';
+  src: url('/fonts/japan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ming';
+  src: url('/fonts/Ming.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LCD';
+  src: url('/fonts/DIGITALDREAM.ttf') format('truetype');
+}
 /* Add your additional font imports here */
 
 @keyframes morph {
@@ -81,4 +96,10 @@ body {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.text-digital {
+  font-family: 'LCD', monospace;
+  text-shadow: 0 0 10px currentColor;
+  letter-spacing: 2px;
 }
