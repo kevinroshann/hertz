@@ -28,7 +28,7 @@ export default function AboutSection() {
           <div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
               <div className="text-black text-3xl sm:text-5xl lg:text-[5vw] font-bold leading-tight">05</div>
-              <div className="text-black text-2xl sm:text-4xl lg:text-[3vw] font-bold "><h2 className="font-['Pricedown'] text-4xl sm:text-3xl md:text-4xl lg:text-[8vw] font-bold mb-6 text-center leading-tight">
+              <div className="text-black text-1l sm:text-3l lg:text-[3vw] font-bold "><h2 className="font-['Pricedown'] text-4xl sm:text-3xl md:text-4xl lg:text-[8vw] font-bold mb-6 text-center leading-tight">
             about
           </h2></div>
             </div>

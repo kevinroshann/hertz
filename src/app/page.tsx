@@ -243,7 +243,7 @@ export default function Home() {
 
             {/* Bottom Ports */}
             <div className="flex justify-around items-center">
-              {['COM', 'VΩmA', '10A'].map((label, i) => (
+              {['COM', 'VΩmA', '10A'].map((label) => (
                 <div key={label} className="flex flex-col items-center">
                   <div className="w-8 h-8 bg-gray-900 rounded-full border-2 border-gray-700 shadow-inner mb-1" />
                   <span className="text-xs text-orange-700 font-bold">{label}</span>
