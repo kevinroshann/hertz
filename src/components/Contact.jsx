@@ -44,6 +44,20 @@ const Contact = () => {
           />
 
           <Button title="contact us" containerClass="mt-10 cursor-pointer" />
+         
+          <p className="mb-10 font-general text-[10px] uppercase">
+           
+          </p>
+          <p className="mb-10 font-general text-[10px] uppercase">
+            Phone 1
+          </p>
+          <p className="mb-10 font-general text-[10px] uppercase">
+            Phone 2
+          </p>
+          <p className="mb-10 font-general text-[10px] uppercase">
+            Phone 3
+          </p>
+         
         </div>
       </div>
     </div>
