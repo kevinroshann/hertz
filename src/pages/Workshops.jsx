@@ -1,70 +1,147 @@
-import React from "react";
-import NavBar from "../components/Navbar";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const Workshops = () => {
-  const slides = [
-    { src: "/img/about.webp", text: "Workshop 1: Introduction to AI" },
-    { src: "/image2.jpg", text: "Workshop 2: Web Development Basics" },
-    { src: "/image3.jpg", text: "Workshop 3: Advanced Python" },
-    { src: "/image4.jpg", text: "Workshop 4: Data Science Essentials" },
-  ];
+const cards = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/400x400",
+    link: "https://example.com/1",
+  },
+  {
+    id: 2,
+    image: "https://via.placeholder.com/400x400",
+    link: "https://example.com/2",
+  },
+  {
+    id: 3,
+    image: "https://via.placeholder.com/400x400",
+    link: "https://example.com/3",
+  },
+  {
+    id: 4,
+    image: "https://via.placeholder.com/400x400",
+    link: "https://example.com/4",
+  },
+  {
+    id: 5,
+    image: "https://via.placeholder.com/400x400",
+    link: "https://example.com/5",
+  },
+  {
+    id: 6,
+    image: "https://via.placeholder.com/400x400",
+    link: "https://example.com/6",
+  },
+  {
+    id: 7,
+    image: "/img/about.webp", // Ensure this path is correct
+    link: "https://example.com/7",
+  },
+];
+
+export default function Workshops() {
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // 1 = next, -1 = prev
+
+  const nextCard = () => {
+    setDirection(1);
+    setIndex((prev) => (prev + 1) % cards.length);
+  };
+
+  const prevCard = () => {
+    setDirection(-1);
+    setIndex((prev) => (prev - 1 + cards.length) % cards.length);
+  };
+
+  // Get the current set of 3 cards to display
+  const getVisibleCards = () => {
+    const prevIndex = (index - 1 + cards.length) % cards.length;
+    const nextIndex = (index + 1) % cards.length;
+    return [
+      { ...cards[prevIndex], position: "left" }, // Left card
+      { ...cards[index], position: "center" }, // Middle card (focused)
+      { ...cards[nextIndex], position: "right" }, // Right card
+    ];
+  };
+
+  // Animation variants
+  const cardVariants = {
+    left: { x: "-80%", scale: 0.8, opacity: 0.7, zIndex: 1 },
+    center: { x: "0%", scale: 1.2, opacity: 1, zIndex: 10 },
+    right: { x: "80%", scale: 0.8, opacity: 0.7, zIndex: 1 },
+    exitLeft: { x: "-100%", opacity: 0, scale: 0.8 },
+    exitRight: { x: "100%", opacity: 0, scale: 0.8 },
+  };
 
   return (
-    <main className="relative min-h-screen w-screen overflow-x-hidden bg-gray-900 text-white">
-      <NavBar />
-      <div className="w-full flex justify-center py-10">
-        <h1 className="text-4xl font-bold">Workshops</h1>
-      </div>
+    <div
+      className="flex flex-col items-center justify-center min-h-screen px-4"
+      style={{
+        backgroundImage: `url('/img/about.webp')`, // Replace with your image URL
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay to make the background darker */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Carousel Section */}
-      <div className="flex flex-col items-center justify-center mt-10 relative w-full">
-        {/* Left Arrow */}
-        <button className="absolute left-6 z-10 bg-white p-2 rounded-full shadow-md swiper-button-prev">
-          <FaArrowLeft className="text-gray-900 text-xl" />
-        </button>
-
-        <Swiper
-          centeredSlides={true}
-          slidesPerView={3}
-          spaceBetween={30}
-          loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-          pagination={{ clickable: true }}
-          modules={[Navigation, Pagination, Autoplay]}
-          className="w-[90%] sm:w-[60%] h-auto"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="flex flex-col items-center">
-              <img
-                src={slide.src}
-                alt={`Slide ${index}`}
-                className={`w-72 h-72 object-cover transition-opacity duration-500 ${
-                  index === 1 ? "opacity-100" : "opacity-50"
-                }`}
-              />
-            </SwiperSlide>
+      <div className="relative flex items-center justify-center w-full max-w-4xl h-[400px] overflow-hidden z-10">
+        <AnimatePresence initial={false} custom={direction}>
+          {getVisibleCards().map((card) => (
+            <motion.div
+              key={card.id}
+              custom={direction}
+              variants={cardVariants}
+              initial={card.position === "left" ? "left" : card.position === "right" ? "right" : "center"}
+              animate={card.position === "left" ? "left" : card.position === "right" ? "right" : "center"}
+              exit={direction === 1 ? "exitLeft" : "exitRight"}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className={`absolute w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] flex items-center justify-center bg-white shadow-lg ${
+                card.position === "center" ? "rounded-2xl" : "rounded-lg" // Curved edges for middle card
+              }`}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.5}
+              onDragEnd={(event, info) => {
+                if (info.offset.x > 100) {
+                  prevCard();
+                } else if (info.offset.x < -100) {
+                  nextCard();
+                }
+              }}
+            >
+              <a
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-full flex items-center justify-center"
+              >
+                <img
+                  src={card.image}
+                  alt={`Card ${card.id}`}
+                  className="w-full h-full object-cover rounded-lg" // Ensure the image fits well
+                />
+              </a>
+            </motion.div>
           ))}
-        </Swiper>
-
-        {/* Right Arrow */}
-        <button className="absolute right-6 z-10 bg-white p-2 rounded-full shadow-md swiper-button-next">
-          <FaArrowRight className="text-gray-900 text-xl" />
+        </AnimatePresence>
+      </div>
+      <div className="flex gap-4 mt-6 z-10">
+        <button
+          onClick={prevCard}
+          className="p-3 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700"
+        >
+          <ArrowLeft size={24} />
+        </button>
+        <button
+          onClick={nextCard}
+          className="p-3 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700"
+        >
+          <ArrowRight size={24} />
         </button>
       </div>
-
-      {/* Text Section Below Carousel */}
-      <div className="flex justify-center mt-6">
-        <p className="text-xl font-semibold">{slides[1].text}</p>
-      </div>
-    </main>
+    </div>
   );
-};
-
-export default Workshops;
+}

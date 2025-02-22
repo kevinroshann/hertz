@@ -271,3 +271,12 @@ body {
     opacity: 0.8;
   }
 }
+.slide-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Ensure square ratio */
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
