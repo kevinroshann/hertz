@@ -4,7 +4,7 @@ import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const navItems = ["/","Events", "Workshops"];
@@ -75,12 +75,14 @@ const NavBar = () => {
           <div className="flex items-center gap-7">
             <img src="/img/logo.svg" alt="logo" className="w-10" />
 
-            <Button
-              id="product-button"
-              title="ECSA"
-              rightIcon={<TiLocationArrow />}
-              containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
-            />
+            <a href="https://ecsacusat.com/" target="_blank" rel="noopener noreferrer">
+  <Button
+    id="product-button"
+    title="ECSA"
+    rightIcon={<TiLocationArrow />}
+    containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
+  />
+</a>
           </div>
 
           {/* Navigation Links and Audio Button */}
