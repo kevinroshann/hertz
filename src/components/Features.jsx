@@ -124,7 +124,7 @@ const Features = () => (
             </>
           }
           description="An 8-hour hardware hackathon, open to all cusatian and non-cusatian students"
-          isComingSoon
+         
         />
         </Link>
       </BentoTilt>
@@ -140,7 +140,7 @@ const Features = () => (
               </>
             }
             description="A platform to showcase the innovative works of cusat students."
-            isComingSoon
+            
           />
           </Link>
         </BentoTilt>
@@ -148,28 +148,28 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <Link to="https://konfhub.com/hert7-mc-project">
           <BentoCard
-            src="videos/feat-3.mp4"
+            src="videos/feat.mp4"
             title={
               <>
                 M<b>C</b>
               </>
             }
             description="A MicroController Challenge among School Of Engineering first year students"
-            isComingSoon
+            
           /></Link>
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
         <Link to="https://konfhub.com/hert7-analog-project">
           <BentoCard
-            src="videos/feat.mp4"
+            src="videos/feat-3.mp4"
             title={
               <>
                 555
               </>
             }
             description="A 555 and OP-AMP Challenge, for ECE second year students."
-            isComingSoon
+           
           />
           </Link>
         </BentoTilt>
@@ -186,7 +186,7 @@ const Features = () => (
               </>
             }
             description="Workshops"
-            isComingSoon
+           
           /></Link>
         </BentoTilt>
         
