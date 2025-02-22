@@ -6,7 +6,7 @@ import { TiLocationArrow } from "react-icons/ti";
 
 import Button from "./Button";
 
-const navItems = ["Home", "Preevents", "Prologue", "About", "Contact"];
+const navItems = ["Home", "Preevents", "Workshops", "ProjectExpo", "Contact"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
@@ -87,7 +87,7 @@ const NavBar = () => {
               {navItems.map((item, index) => (
                 <a
                   key={index}
-                  href={`preevents`}
+                  href={item}
                   className="nav-hover-btn"
                 >
                   {item}

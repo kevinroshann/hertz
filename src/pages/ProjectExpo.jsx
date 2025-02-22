@@ -4,7 +4,7 @@ import NavBar from "../components/Navbar";
 
 import React from "react";
 
-const Preevents= () => {
+const ProjectExpo= () => {
   return (
     <main className="relative min-h-screen w-screen overflow-x-hidden">
       <NavBar/>
@@ -18,4 +18,4 @@ const Preevents= () => {
   );
 };
 
-export default Preevents;
+export default ProjectExpo;

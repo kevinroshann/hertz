@@ -7,6 +7,8 @@ import NavBar from "./components/Navbar";
 // import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Preevents from "./pages/Preevents";
+import Workshops from "./pages/Workshops";
+import ProjectExpo from "./pages/ProjectExpo";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/home" element={<Home/>} /> */}
         <Route path="/Preevents" element={<Preevents />} />
+        <Route path="/Workshops" element={<Workshops />} />
+        <Route path="/ProjectExpo" element={<ProjectExpo />} />
       </Routes>
     </main>
   );
