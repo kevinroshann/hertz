@@ -80,9 +80,8 @@ const Hero = () => {
         <div className="absolute-center absolute z-50 flex flex-col items-center justify-center text-white">
           <h2 className="text-4xl sm:text-6xl font-bold special-font">Event Starts In</h2>
           {/* <h1 className="special-font text-3xl sm:text-5xl  text-white">{countdown}</h1> */}
-          <h1 className="text-9xl font-extrabold text-center relative">
-        <span className="absolute inset-0 bg-black opacity-50"></span>
-        <span className="relative text-white">{countdown}</span>
+          <h1 className="text-white text-center font-extrabold bg-black bg-opacity-50 p-4 rounded-lg text-6xl md:text-8xl lg:text-9xl">
+        {countdown}
       </h1>
         </div>
 
