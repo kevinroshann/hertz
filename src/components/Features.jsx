@@ -108,7 +108,7 @@ const Features = () => (
           About HERTZ
         </p>
         <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-        Hert is the annual flagship tech event of Electronics & Communication Students Association CUSAT. 
+        Hertz is the annual flagship tech event of Electronics & Communication Students Association CUSAT. 
         Converging creativity and technical skills, providing a dynamic platform for students to showcase their talents, 
         exchange ideas and learn from other experts.
         </p>
