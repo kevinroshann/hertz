@@ -6,7 +6,7 @@ import { TiLocationArrow } from "react-icons/ti";
 
 import Button from "./Button";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+const navItems = ["Home", "Preevents", "Prologue", "About", "Contact"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
@@ -125,3 +125,20 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+
+
+// import { Link } from "react-router-dom";
+
+// function Navbar() {
+//   return (
+//     <nav>
+//       {/* <Link to="/">Home</Link> */}
+//       <Link to="/Home">Home</Link>
+//       <Link to="/Preevents">Contact</Link>
+//     </nav>
+//   );
+// }
+
+// export default Navbar;
