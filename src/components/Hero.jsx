@@ -258,15 +258,15 @@ const Hero = () => {
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              ECSA TECHFEST <br /> Unleash Your Ideas
+              ECSA FLAGSHIP TECH EVENT <br /> Unleash Your Ideas
             </p>
 
-            <Button
+            {/* <Button
               id="watch-trailer"
               title="Watch trailer"
               leftIcon={<TiLocationArrow />}
               containerClass="bg-yellow-300 flex-center gap-1"
-            />
+            /> */}
           </div>
         </div>
       </div>

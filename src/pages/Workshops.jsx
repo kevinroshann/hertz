@@ -6,7 +6,7 @@ const cards = [
   {
     id: 1,
     image: "/img/sinan.png",
-    link: "https://example.com/4",
+    link: "https://konfhub.com/hertz7-devops",
   },
   // {
   //   id: 2,

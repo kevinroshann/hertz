@@ -115,6 +115,7 @@ const Features = () => (
       </div>
 
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
+      <Link to="https://lu.ma/xyjej4si">
         <BentoCard
           src="videos/feature-1.mp4"
           title={
@@ -122,13 +123,15 @@ const Features = () => (
               Build<b>a</b>ton
             </>
           }
-          description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
+          description="An 8-hour hardware hackathon, open to all cusatian and non-cusatian students"
           isComingSoon
         />
+        </Link>
       </BentoTilt>
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
+        <Link to="/Events">
           <BentoCard
             src="videos/feature-2.mp4"
             title={
@@ -136,12 +139,14 @@ const Features = () => (
                 Project <b>Expo</b>
               </>
             }
-            description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+            description="A platform to showcase the innovative works of cusat students."
             isComingSoon
           />
+          </Link>
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
+          <Link to="https://konfhub.com/hert7-mc-project">
           <BentoCard
             src="videos/feat-3.mp4"
             title={
@@ -149,22 +154,24 @@ const Features = () => (
                 M<b>C</b>
               </>
             }
-            description="A MicroController Challenge"
+            description="A MicroController Challenge among School Of Engineering first year students"
             isComingSoon
-          />
+          /></Link>
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
+        <Link to="https://konfhub.com/hert7-analog-project">
           <BentoCard
-            src="videos/feature-4.mp4"
+            src="videos/feat.mp4"
             title={
               <>
                 555
               </>
             }
-            description="A 555 and OP-AMP Challenge"
+            description="A 555 and OP-AMP Challenge, for ECE second year students."
             isComingSoon
           />
+          </Link>
         </BentoTilt>
 
        
@@ -172,7 +179,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <Link to="/Workshops">
           <BentoCard
-            src="videos/feature-4.mp4"
+            src="videos/feature-3.mp4"
             title={
               <>
                 Technical <b>WorkShops</b>
