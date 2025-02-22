@@ -185,7 +185,7 @@ const Features = () => (
                 Technical <b>WorkShops</b>
               </>
             }
-            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            description="Workshops"
             isComingSoon
           /></Link>
         </BentoTilt>
