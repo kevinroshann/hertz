@@ -6,7 +6,7 @@ import NavBar from "./components/Navbar";
 // import Contact from "./components/Contact";
 // import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Preevents from "./pages/Preevents";
+import Events from "./pages/Events";
 import Workshops from "./pages/Workshops";
 import ProjectExpo from "./pages/ProjectExpo";
 import { Routes, Route } from "react-router-dom";
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/home" element={<Home/>} /> */}
-        <Route path="/Preevents" element={<Preevents />} />
+        <Route path="/Events" element={<Events />} />
         <Route path="/Workshops" element={<Workshops />} />
         <Route path="/ProjectExpo" element={<ProjectExpo />} />
       </Routes>

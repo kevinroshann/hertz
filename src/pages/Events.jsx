@@ -40,7 +40,7 @@ const cards = [
   },
 ];
 
-export default function Preevents() {
+export default function Events() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 1 = next, -1 = prev
 
