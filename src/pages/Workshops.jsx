@@ -5,39 +5,39 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const cards = [
   {
     id: 1,
-    image: "https://via.placeholder.com/400x400",
-    link: "https://example.com/1",
-  },
-  {
-    id: 2,
-    image: "https://via.placeholder.com/400x400",
-    link: "https://example.com/2",
-  },
-  {
-    id: 3,
-    image: "https://via.placeholder.com/400x400",
-    link: "https://example.com/3",
-  },
-  {
-    id: 4,
-    image: "https://via.placeholder.com/400x400",
+    image: "/img/sinan.png",
     link: "https://example.com/4",
   },
-  {
-    id: 5,
-    image: "https://via.placeholder.com/400x400",
-    link: "https://example.com/5",
-  },
-  {
-    id: 6,
-    image: "https://via.placeholder.com/400x400",
-    link: "https://example.com/6",
-  },
-  {
-    id: 7,
-    image: "/img/about.webp", // Ensure this path is correct
-    link: "https://example.com/7",
-  },
+  // {
+  //   id: 2,
+  //   image: "https://via.placeholder.com/400x400",
+  //   link: "https://example.com/2",
+  // },
+  // {
+  //   id: 3,
+  //   image: "https://via.placeholder.com/400x400",
+  //   link: "https://example.com/3",
+  // },
+  // {
+  //   id: 4,
+  //   image: "https://via.placeholder.com/400x400",
+  //   link: "https://example.com/4",
+  // },
+  // {
+  //   id: 5,
+  //   image: "https://via.placeholder.com/400x400",
+  //   link: "https://example.com/5",
+  // },
+  // {
+  //   id: 6,
+  //   image: "https://via.placeholder.com/400x400",
+  //   link: "https://example.com/6",
+  // },
+  // {
+  //   id: 7,
+  //   image: "/img/about.webp", // Ensure this path is correct
+  //   link: "https://example.com/7",
+  // },
 ];
 
 export default function Workshops() {
