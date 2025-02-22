@@ -7,7 +7,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 import Button from "./Button";
 
-const navItems = ["Preevents", "Workshops"];
+const navItems = ["/","Preevents", "Workshops"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
