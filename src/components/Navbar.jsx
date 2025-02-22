@@ -3,15 +3,17 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+import { FiMenu, FiX } from "react-icons/fi";
 
 import Button from "./Button";
 
-const navItems = ["Preevents", "Workshops", "ProjectExpo", "Contact"];
+const navItems = ["Preevents", "Workshops"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Refs for audio and navigation container
   const audioElementRef = useRef(null);
@@ -65,7 +67,7 @@ const NavBar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0 top-4 z-50 h-16 bg-black border-none transition-all duration-700 sm:inset-x-6"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
@@ -83,18 +85,28 @@ const NavBar = () => {
 
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-white text-2xl"
+            >
+              {isMenuOpen ? <FiX /> : <FiMenu />}
+            </button>
+
+            {/* Desktop Navigation */}
             <div className="hidden md:block">
               {navItems.map((item, index) => (
                 <a
                   key={index}
                   href={item}
-                  className="nav-hover-btn"
+                  className="nav-hover-btn text-white"
                 >
                   {item}
                 </a>
               ))}
             </div>
 
+            {/* Audio Button */}
             <button
               onClick={toggleAudioIndicator}
               className="ml-10 flex items-center space-x-0.5"
@@ -108,7 +120,7 @@ const NavBar = () => {
               {[1, 2, 3, 4].map((bar) => (
                 <div
                   key={bar}
-                  className={clsx("indicator-line", {
+                  className={clsx("indicator-line bg-black", {
                     active: isIndicatorActive,
                   })}
                   style={{
@@ -119,26 +131,25 @@ const NavBar = () => {
             </button>
           </div>
         </nav>
+
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-black text-white flex flex-col items-center p-4 md:hidden">
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={item}
+                className="py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        )}
       </header>
     </div>
   );
 };
 
 export default NavBar;
-
-
-
-
-// import { Link } from "react-router-dom";
-
-// function Navbar() {
-//   return (
-//     <nav>
-//       {/* <Link to="/">Home</Link> */}
-//       <Link to="/Home">Home</Link>
-//       <Link to="/Preevents">Contact</Link>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
