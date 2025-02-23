@@ -19,16 +19,16 @@ const cards = [
     link: "https://konfhub.com/hert7-mc-project",
   },
 
-  // {
-  //   id: 5,
-  //   image: "https://via.placeholder.com/400x400",
-  //   link: "https://example.com/5",
-  // },
-  // {
-  //   id: 6,
-  //   image: "https://via.placeholder.com/400x400",
-  //   link: "https://example.com/6",
-  // },
+  {
+    id: 5,
+    image: "public/img/aztec.jpeg",
+    link: "https://konfhub.com/aztec",
+  },
+  {
+    id: 6,
+    image: "public/img/expo.jpeg",
+    link: "https://konfhub.com/196b5a04-32ef-4974-b17c-9d8558fcfeb1",
+  },
   // {
   //   id: 7,
   //   image: "/img/about.webp", // Ensure this path is correct
