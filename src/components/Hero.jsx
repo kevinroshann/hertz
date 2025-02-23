@@ -86,9 +86,23 @@ const Hero = () => {
         </div>
 
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">2<b>0</b>25</h1>
-
         <div className="absolute left-0 top-0 z-40 size-full">
-  <div className="mt-24 px-5 sm:px-10 text-center sm:text-left mx-auto sm:mx-0">
+  {/* Mobile View: Centered Text */}
+  <div className="sm:hidden flex flex-col items-center px-5 mt-40">
+    
+    <p className="mt-4 max-w-64 font-robert-regular text-blue-100 text-sm xs:text-base text-center">
+      ECSA FLAGSHIP TECH EVENT <br /> MARCH 2nd 3rd
+    </p>
+    <h1></h1>
+    <h1 className="special-font hero-heading text-blue-100 text-6xl xs:text-7xl">
+      HER<b>T</b>Z 07
+    </h1>
+
+  </div>
+
+
+  {/* Desktop View: Original Layout */}
+  <div className="hidden sm:block mt-24 px-5 sm:px-10 text-center sm:text-left mx-auto sm:mx-0">
     <h1 className="special-font hero-heading text-blue-100 text-4xl xs:text-5xl sm:text-6xl">
       HER<b>T</b>Z 07
     </h1>
@@ -97,6 +111,7 @@ const Hero = () => {
     </p>
   </div>
 </div>
+
 
 
       </div>
