@@ -108,7 +108,7 @@ const Hero = () => {
 
   {/* Desktop View: Original Layout */}
   <div className="hidden sm:block mt-24 px-5 sm:px-10 text-center sm:text-left mx-auto sm:mx-0">
-    <h1 className="special-font hero-heading text-blue-100 text-4xl xs:text-5xl sm:text-6xl">
+    <h1 className="special-font hero-heading text-blue-100 " style={{ fontSize: '8rem' }}>
       HER<b>T</b>Z 07
     </h1>
     <p className="mb-5 max-w-64 font-robert-regular text-blue-100 text-lg xs:text-xl sm:text-base mx-auto sm:mx-0">
