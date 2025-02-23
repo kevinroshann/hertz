@@ -89,7 +89,7 @@ const Hero = () => {
         <div className="absolute left-0 top-0 z-40 size-full">
   {/* Mobile View: Centered Text */}
   <div className="sm:hidden flex flex-col items-center px-5 mt-20"> {/* Adjusted from mt-40 to mt-20 */}
-  <div className="sm:hidden flex flex-col items-center  mt-5"> 
+  <div className="sm:hidden flex flex-col items-center  mt-10 mb-0"> 
   <img 
     src="/img/curiefy.png" 
     // alt="Event Logo" 
@@ -99,7 +99,7 @@ const Hero = () => {
   Presents
 </p></div>
 
-    <p className="mt-4 max-w-64 font-robert-regular text-blue-100 text-sm xs:text-base text-center">
+    <p className="mt-0 max-w-64 font-robert-regular text-blue-100 text-sm xs:text-base text-center">
        MARCH 2nd 3rd
     </p>
     
@@ -120,9 +120,9 @@ const Hero = () => {
   <img 
     src="/img/curiefy.png" 
     // alt="Event Logo" 
-    className="max-w-16 h-auto mb-2 sm:mb-2" 
+    className="max-w-auto h-11 mb-2 sm:mb-2" 
   />
-      <p className="mb-5 max-w-64 font-robert-regular text-blue-100 text-lg xs:text-xl sm:text-base mx-auto sm:mx-0">
+      <p className="mb-5 max-w-64 font-robert-regular text-blue-100 text-lg xs:text-xl sm:text-base mx-auto sm:mx-0"style={{ fontSize: '1.4rem' }}>
       Presents
     </p>
     <h1 className="special-font hero-heading text-blue-100 " style={{ fontSize: '8rem' }}>
