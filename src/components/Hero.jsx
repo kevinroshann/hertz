@@ -91,14 +91,16 @@ const Hero = () => {
   <div className="sm:hidden flex flex-col items-center px-5 mt-40">
     
     <p className="mt-4 max-w-64 font-robert-regular text-blue-100 text-sm xs:text-base text-center">
-      ECSA FLAGSHIP TECH EVENT <br /> MARCH 2nd 3rd
+       MARCH 2nd 3rd
     </p>
     
     <h1 className="special-font hero-heading text-blue-100" style={{ fontSize: '5rem' }}>
   HER<b>T</b>Z 07
 </h1>
 
-
+<p className="mt-4 max-w-64 font-robert-regular text-blue-100 text-sm xs:text-base text-center">
+      ECSA FLAGSHIP TECH EVENT 
+    </p>
   </div>
 
 
