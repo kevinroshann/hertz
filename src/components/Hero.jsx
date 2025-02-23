@@ -78,9 +78,9 @@ const Hero = () => {
         <video ref={videoRef} src="videos/heropage.mp4" autoPlay loop muted className="absolute left-0 top-0 size-full object-cover object-center" />
 
         <div className="absolute-center absolute z-50 flex flex-col items-center justify-center text-white">
-          <h2 className="text-4xl sm:text-6xl font-bold special-font">Event Starts In</h2>
+          {/* <h2 className="text-4xl sm:text-6xl font-bold special-font">Event Starts In</h2> */}
           {/* <h1 className="special-font text-3xl sm:text-5xl  text-white">{countdown}</h1> */}
-          <h1 className="text-white text-center font-extrabold bg-black bg-opacity-50 p-4 rounded-lg text-6xl md:text-8xl lg:text-9xl">
+          <h1 className="special-font hero-heading text-white text-center bg-black bg-opacity-50 p-4 rounded-lg text-6xl md:text-8xl lg:text-9xl">
         {countdown}
       </h1>
         </div>
@@ -88,11 +88,17 @@ const Hero = () => {
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">2<b>0</b>25</h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-blue-100">HER<b>T</b>Z</h1>
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">ECSA FLAGSHIP TECH EVENT <br /> MARCH 2nd 3rd</p>
-          </div>
-        </div>
+  <div className="mt-24 px-5 sm:px-10 text-center sm:text-left mx-auto sm:mx-0">
+    <h1 className="special-font hero-heading text-blue-100 text-4xl xs:text-5xl sm:text-6xl">
+      HER<b>T</b>Z 07
+    </h1>
+    <p className="mb-5 max-w-64 font-robert-regular text-blue-100 text-lg xs:text-xl sm:text-base mx-auto sm:mx-0">
+      ECSA FLAGSHIP TECH EVENT <br /> MARCH 2nd 3rd
+    </p>
+  </div>
+</div>
+
+
       </div>
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">2<b>0</b>25</h1>
     </div>

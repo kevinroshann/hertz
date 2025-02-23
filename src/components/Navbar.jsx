@@ -72,18 +72,19 @@ const NavBar = () => {
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
           {/* Logo and Product button */}
-          <div className="flex items-center gap-7">
-            <img src="/img/logo.svg" alt="logo" className="w-10" />
+<div className="flex items-center gap-7">
+  <img src="/img/logo.svg" alt="logo" className="w-10" />
 
-            <a href="https://ecsacusat.com/" target="_blank" rel="noopener noreferrer">
-  <Button
-    id="product-button"
-    title="ECSA"
-    rightIcon={<TiLocationArrow />}
-    containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
-  />
-</a>
-          </div>
+  <a href="https://ecsacusat.com/" target="_blank" rel="noopener noreferrer">
+    <Button
+      id="product-button"
+      title="ECSA"
+      rightIcon={<TiLocationArrow />}
+      containerClass="bg-blue-50 flex items-center justify-center gap-1"
+    />
+  </a>
+</div>
+
 
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
