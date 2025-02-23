@@ -1,0 +1,47 @@
+/* Marquee Container */
+.marquee-container {
+    width: 100%;
+    overflow: hidden; /* Hide overflow to create the marquee effect */
+    white-space: nowrap; /* Prevent wrapping of images */
+    background-color: black; /* Set background to black */
+    padding: 20px 0; /* Add some padding */
+  }
+  
+  /* Marquee Content */
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite; /* Animation for infinite scrolling */
+  }
+  
+  /* Marquee Images */
+  .marquee-image {
+    display: inline-block;
+    margin: 0 10px; /* Consistent margin between images */
+    width: 150px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  /* Keyframes for the marquee animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0); /* Start from the original position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move to the left by 50% of the content width */
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .marquee-image {
+      width: 120px; /* Smaller width for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .marquee-image {
+      width: 100px; /* Smaller width for mobile devices */
+      margin: 0 5px; /* Reduce margin for smaller screens */
+    }
+  }

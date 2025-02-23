@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import Story from "../components/Story";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import ImageMarquee from "../components/ImageMarquee";
 // import Home from "./pages/Home";
 // import { Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function Home() {
       <Features />
 
       <Story />
+      <ImageMarquee/>
       <Contact />
       <Footer />
     </main>
