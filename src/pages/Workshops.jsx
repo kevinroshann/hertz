@@ -8,16 +8,16 @@ const cards = [
     image: "/img/sinan.png",
     link: "https://konfhub.com/hertz7-devops",
   },
-  // {
-  //   id: 2,
-  //   image: "https://via.placeholder.com/400x400",
-  //   link: "https://example.com/2",
-  // },
-  // {
-  //   id: 3,
-  //   image: "https://via.placeholder.com/400x400",
-  //   link: "https://example.com/3",
-  // },
+  {
+    id: 2,
+    image: "public/img/cad.jpeg",
+    link: "https://konfhub.com/f0d12102-48cd-44f2-a3b4-eebc85a7a70f",
+  },
+  {
+    id: 3,
+    image: "public/img/pcb.jpeg",
+    link: "https://konfhub.com/0b3ff728-a7b7-41e8-885e-76f5dc65f58e",
+  },
   // {
   //   id: 4,
   //   image: "https://via.placeholder.com/400x400",
