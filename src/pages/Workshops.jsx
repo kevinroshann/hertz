@@ -10,12 +10,12 @@ const cards = [
   },
   {
     id: 2,
-    image: "public/img/cad.jpeg",
+    image: "/img/cad.jpeg",
     link: "https://konfhub.com/f0d12102-48cd-44f2-a3b4-eebc85a7a70f",
   },
   {
     id: 3,
-    image: "public/img/pcb.jpeg",
+    image: "/img/pcb.jpeg",
     link: "https://konfhub.com/0b3ff728-a7b7-41e8-885e-76f5dc65f58e",
   },
   // {

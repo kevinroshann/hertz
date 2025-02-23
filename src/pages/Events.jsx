@@ -21,12 +21,12 @@ const cards = [
 
   {
     id: 5,
-    image: "public/img/aztec.jpeg",
+    image: "/img/aztec.jpeg",
     link: "https://konfhub.com/aztec",
   },
   {
     id: 6,
-    image: "public/img/expo.jpeg",
+    image: "/img/expo.jpeg",
     link: "https://konfhub.com/196b5a04-32ef-4974-b17c-9d8558fcfeb1",
   },
   // {
