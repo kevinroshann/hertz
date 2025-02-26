@@ -37,7 +37,7 @@ export default function ProjectExpo() {
             transition={{ duration: 1 }}
             className="text-5xl font-bold"
           >
-            🚀 Hertz 7 Project Expo
+            Hertz 7 Project Expo
           </motion.h1>
           <p className="text-xl mt-3">2 & 3 March 2025 | Students Amenity Centre, CUSAT</p>
           <div className="flex justify-center gap-6 mt-6 text-3xl font-bold">
