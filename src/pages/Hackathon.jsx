@@ -63,7 +63,7 @@ export default function Hackathon() {
             transition={{ duration: 1 }}
             className="mt-10 bg-gray-900 px-6 py-4 text-4xl font-bold rounded-lg shadow-lg"
           >
-            🏆 Registered Participants: <span className="text-yellow-400">41</span>
+            Total Teams Registered: <span className="text-yellow-400">43</span>
           </motion.div>
           <Button 
             className="mt-6 px-6 py-3 text-xl font-bold text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 focus:ring-4 focus:ring-blue-500"
