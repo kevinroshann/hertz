@@ -18,21 +18,21 @@ const cards = [
     image: "/img/pcb.jpeg",
     link: "https://konfhub.com/0b3ff728-a7b7-41e8-885e-76f5dc65f58e",
   },
-  // {
-  //   id: 4,
-  //   image: "https://via.placeholder.com/400x400",
-  //   link: "https://example.com/4",
-  // },
-  // {
-  //   id: 5,
-  //   image: "https://via.placeholder.com/400x400",
-  //   link: "https://example.com/5",
-  // },
-  // {
-  //   id: 6,
-  //   image: "https://via.placeholder.com/400x400",
-  //   link: "https://example.com/6",
-  // },
+  {
+    id: 4,
+    image: "/img/embed.jpeg",
+    link: "https://konfhub.com/embedw",
+  },
+  {
+    id: 5,
+    image: "/img/ai.jpeg",
+    link: "https://konfhub.com/e5170bd5-cfc3-4d26-9ee8-297704f11921",
+  },
+  {
+    id: 6,
+    image: "/img/fab.jpeg",
+    link: "https://konfhub.com/48f308eb-334b-4f04-9c0e-a74a9c2ad467",
+  },
   // {
   //   id: 7,
   //   image: "/img/about.webp", // Ensure this path is correct
