@@ -5,34 +5,37 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const cards = [
   {
     id: 1,
-    image: "/img/sinan.png",
-    link: "https://konfhub.com/hertz7-devops",
-  },
-  {
-    id: 2,
-    image: "/img/cad.jpeg",
-    link: "https://konfhub.com/f0d12102-48cd-44f2-a3b4-eebc85a7a70f",
-  },
-  {
-    id: 3,
-    image: "/img/pcb.jpeg",
-    link: "https://konfhub.com/0b3ff728-a7b7-41e8-885e-76f5dc65f58e",
-  },
-  {
-    id: 4,
     image: "/img/embed.jpeg",
     link: "https://konfhub.com/embedw",
   },
   {
-    id: 5,
+    id: 2,
     image: "/img/ai.jpeg",
     link: "https://konfhub.com/e5170bd5-cfc3-4d26-9ee8-297704f11921",
   },
   {
-    id: 6,
+    id: 3,
     image: "/img/fab.jpeg",
     link: "https://konfhub.com/48f308eb-334b-4f04-9c0e-a74a9c2ad467",
   },
+  
+  {
+    id: 5,
+    image: "/img/cad.jpeg",
+    link: "https://konfhub.com/f0d12102-48cd-44f2-a3b4-eebc85a7a70f",
+  },
+  {
+    id: 4,
+    image: "/img/pcb.jpeg",
+    link: "https://konfhub.com/0b3ff728-a7b7-41e8-885e-76f5dc65f58e",
+    
+  },
+  {
+    id: 6,
+    image: "/img/sinan.png",
+    link: "https://konfhub.com/hertz7-devops",
+  },
+  
   // {
   //   id: 7,
   //   image: "/img/about.webp", // Ensure this path is correct
