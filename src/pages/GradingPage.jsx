@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function GradingPage() {
   const [isAllowed, setIsAllowed] = useState(null);
-  const eventLocation = { lat: 10.042556, lng: 76.328750 }; // 10°02'33.2"N 76°19'43.5"E
+  const eventLocation = { lat: 10.042778, lng: 76.328611 }; // 10°02'34.0"N 76°19'43.0"E
   const allowedRadius = 20; // meters
 
   useEffect(() => {
@@ -13,7 +13,11 @@ export default function GradingPage() {
           const distance = getDistance(latitude, longitude, eventLocation.lat, eventLocation.lng);
           setIsAllowed(distance <= allowedRadius);
         },
-        () => setIsAllowed(false)
+        (error) => {
+          console.error("Geolocation error:", error);
+          setIsAllowed(false);
+        },
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
       );
     } else {
       setIsAllowed(false);
@@ -39,7 +43,7 @@ export default function GradingPage() {
         <p>Checking location...</p>
       ) : isAllowed ? (
         <iframe
-          src="https://docs.google.com/forms/d/e/your-google-form-id/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfvbL6-mycjewhlAuwte3lLaUAiUXZ0WTxHA8MgHL2TCtEaVQ/viewform?embedded=true"
           width="100%"
           height="800px"
           className="border rounded-lg shadow-lg"
@@ -47,8 +51,7 @@ export default function GradingPage() {
         ></iframe>
       ) : (
         <p className="text-2xl font-bold">Grading Page is only available at the event location.<br/>Contact organizers if this is a mistake.</p>
-        
-      ) }
+      )}
     </div>
   );
 }
