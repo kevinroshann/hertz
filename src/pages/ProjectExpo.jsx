@@ -83,6 +83,7 @@ export default function ProjectExpo() {
             <ul className="list-disc pl-5">
               <li>Projects must be on display for both days of the event.</li>
               <li>A maximum of two team members can be present at the stall at any time.</li>
+              <li>Budget limit: ₹20,000. Participants must provide a cost breakdown if requested.</li>
             </ul>
           </li>
           <li><strong>3. Judging Process:</strong>
@@ -98,6 +99,16 @@ export default function ProjectExpo() {
             </ul>
           </li>
         </ul>
+      </div>
+      
+      {/* Contact Organizers */}
+      <div className="w-full max-w-6xl flex flex-col p-8 text-center">
+        <h2 className="text-3xl font-bold">📞 Contact Organizers</h2>
+        <p className="text-lg mt-4">For any queries, feel free to reach out:</p>
+        <p className="text-lg mt-2">
+          <a href="tel:+919746986389" className="text-blue-400 hover:underline">Ajmal</a> | 
+          <a href="tel:+919495402793" className="text-blue-400 hover:underline"> Aquib</a>
+        </p>
       </div>
       <Button 
         className="mt-6 px-6 py-3 text-xl font-bold text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 mb-10"
