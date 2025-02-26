@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Workshops from "./pages/Workshops";
 import ProjectExpo from "./pages/ProjectExpo";
+import Quiz from "./pages/Quiz";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Events" element={<Events />} />
         <Route path="/Workshops" element={<Workshops />} />
         <Route path="/ProjectExpo" element={<ProjectExpo />} />
+        <Route path="/Quiz" element={<Quiz />} /> {/* New Route */}
       </Routes>
     </main>
   );
