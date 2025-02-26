@@ -11,6 +11,7 @@ import Workshops from "./pages/Workshops";
 import ProjectExpo from "./pages/ProjectExpo";
 import Quiz from "./pages/Quiz";
 import Hackathon from "./pages/Hackathon";
+import GradingPage from "./pages/GradingPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/ProjectExpo" element={<ProjectExpo />} />
         <Route path="/Quiz" element={<Quiz />} /> {/* New Route */}
         <Route path="/Hackathon" element={<Hackathon />} />
+        <Route path="/GradingPage" element={<GradingPage />} />
       </Routes>
     </main>
   );
