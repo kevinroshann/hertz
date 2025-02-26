@@ -11,7 +11,7 @@ const cards = [
   {
     id: 2,
     image: "/img/two.jpeg",
-    link: "https://lu.ma/xyjej4si",
+    link: "/Hackathon",
   },
   {
     id: 3,
