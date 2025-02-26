@@ -73,7 +73,10 @@ const NavBar = () => {
         <nav className="flex size-full items-center justify-between p-4">
           {/* Logo and Product button */}
 <div className="flex items-center gap-7">
-  <img src="/img/logo.svg" alt="logo" className="w-10" />
+<a href="/">
+    <img src="/img/logo.svg" alt="logo" className="w-10" />
+</a>
+
 
   <a href="https://ecsacusat.com/" target="_blank" rel="noopener noreferrer">
     <Button
