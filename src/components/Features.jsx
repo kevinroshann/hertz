@@ -131,7 +131,7 @@ const Features = () => (
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
-        <Link to="/Events">
+        <Link to="/ProjectExpo">
           <BentoCard
             src="videos/feature-2.mp4"
             title={

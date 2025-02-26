@@ -24,7 +24,7 @@ export default function ProjectExpo() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-screen text-white bg-cover bg-center" style={{ backgroundImage: "url('/img/common-bg.webp')" }}>
+    <div className="flex flex-col items-center w-screen text-white bg-cover bg-center" style={{ backgroundImage: "url('/img/bg.jpg')" }}>
       {/* Hero Section */}
       <div
         className="w-full min-h-screen flex flex-col items-center justify-center text-center p-8 bg-cover bg-center"
@@ -59,10 +59,10 @@ export default function ProjectExpo() {
       </div>
 
       {/* Poster and Content Layout */}
-      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8 p-8 bg-cover bg-center" style={{ backgroundImage: "url('/img/section-bg.webp')" }}>
+      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8 p-8 bg-cover bg-center">
         {/* Poster Section */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <img src="/img/project-expo-poster.webp" alt="Project Expo Poster" className="w-full max-w-md rounded-lg shadow-lg" />
+          <img src="/img/expo.jpeg" alt="Project Expo Poster" className="w-full max-w-md rounded-lg shadow-lg" />
         </div>
         {/* About Section */}
         <div className="w-full md:w-1/2 flex flex-col space-y-8">
@@ -99,6 +99,15 @@ export default function ProjectExpo() {
           </li>
         </ul>
       </div>
+      <Button 
+        className="mt-6 px-6 py-3 text-xl font-bold text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 mb-10"
+        component="a" 
+        href="/GradingPage" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Public Voting (Evaluation)
+      </Button>
     </div>
   );
 }

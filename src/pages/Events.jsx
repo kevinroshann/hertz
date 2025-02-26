@@ -27,7 +27,7 @@ const cards = [
   {
     id: 6,
     image: "/img/expo.jpeg",
-    link: "https://konfhub.com/196b5a04-32ef-4974-b17c-9d8558fcfeb1",
+    link: "/ProjectExpo",
   },
   // {
   //   id: 7,
