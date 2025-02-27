@@ -23,7 +23,7 @@ export default function AIQuiz() {
         <Button 
             className="mt-6 px-6 py-3 text-xl font-bold text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700"
             component="a" 
-            href="https://konfhub.com/196b5a04-32ef-4974-b17c-9d8558fcfeb1" 
+            href="https://quiz.everestwebdeals.co/?form=bd33cdc432963ececeafb03ea64dba58" 
             target="_blank" 
             rel="noopener noreferrer"
           >
@@ -35,7 +35,7 @@ export default function AIQuiz() {
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8 p-8 bg-cover bg-center">
         {/* Poster Section */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <img src="/img/ai.jpeg" alt="Quiz Poster" className="w-full max-w-md rounded-lg shadow-lg" />
+          <a  href="https://konfhub.com/e5170bd5-cfc3-4d26-9ee8-297704f11921" ><img src="/img/ai.jpeg" alt="Quiz Poster" className="w-full max-w-md rounded-lg shadow-lg" /></a>
         </div>
         {/* About Section */}
         <div className="w-full md:w-1/2 flex flex-col space-y-8">
@@ -56,11 +56,21 @@ export default function AIQuiz() {
           <Button 
             className="mt-6 px-6 py-3 text-xl font-bold text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700"
             component="a" 
-            href="https://konfhub.com/196b5a04-32ef-4974-b17c-9d8558fcfeb1" 
+            href="https://quiz.everestwebdeals.co/?form=bd33cdc432963ececeafb03ea64dba58" 
             target="_blank" 
             rel="noopener noreferrer"
           >
             Start Quiz
+          </Button>
+
+          <Button 
+            className="mt-6 px-6 py-3 text-xl font-bold text-white bg-black-600 rounded-lg shadow-lg hover:bg-black-700"
+            component="a" 
+            href="https://konfhub.com/e5170bd5-cfc3-4d26-9ee8-297704f11921" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Join Workshop
           </Button>
         </div>
       </div>
