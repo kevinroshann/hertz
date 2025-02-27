@@ -5,7 +5,7 @@ export default function GradingPage() {
   const [userLocation, setUserLocation] = useState(null);
   const [locationName, setLocationName] = useState("Fetching location...");
   const eventLocation = { lat: 10.042766, lng: 76.328501 }; // Event location
-  const allowedRadius = 20; // meters
+  const allowedRadius = 10; // meters
 
   useEffect(() => {
     if (navigator.geolocation) {
