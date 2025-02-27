@@ -17,7 +17,7 @@ export default function AIQuiz() {
             transition={{ duration: 1 }}
             className="text-5xl font-bold"
           >
-            Hert7 AI & ML Quiz
+            Hert7 AI & Data Science Quiz
           </motion.h1>
         </div>
         <Button 
@@ -42,7 +42,7 @@ export default function AIQuiz() {
           <p className="text-xl">Think you know AI & ML? Put your knowledge to the test in this fun and engaging quiz!</p>
           <p>💡 <strong>How It Works:</strong></p>
           <ul className="list-disc pl-5">
-            <li>🔹 Answer exciting questions on AI, ML, and recent tech breakthroughs.</li>
+            <li>🔹 Answer exciting questions on AI, Data Science, and recent tech breakthroughs.</li>
             <li>🔹 No need to be an expert—just bring your curiosity!</li>
             <li>🔹 Quiz Timing: Participate anytime before noon 28 Feb.</li>
           </ul>
@@ -51,7 +51,7 @@ export default function AIQuiz() {
             <li>🏆 Top scorers win exclusive Hert7 swags, stickers, and surprises!</li>
             <li>🎓 The quiz leader gets a 40% discount on our upcoming AI & ML workshop!</li>
           </ul>
-          <p className="mt-4">🔍 <strong>Want to explore AI & ML beyond the quiz?</strong></p>
+          <p className="mt-4">🔍 <strong>Want to explore AI & Data Science beyond the quiz?</strong></p>
           <p>This is just a glimpse into the fascinating world of artificial intelligence! Stay tuned for more learning opportunities to take your skills to the next level.</p>
           <Button 
             className="mt-6 px-6 py-3 text-xl font-bold text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700"
@@ -60,7 +60,7 @@ export default function AIQuiz() {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            Start Quiz
+            Start Quiz 
           </Button>
 
           <Button 
