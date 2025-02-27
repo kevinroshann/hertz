@@ -11,7 +11,7 @@ export default function Quiz() {
       >
         <div className="w-full max-w-5xl h-[80vh] border border-gray-300 shadow-lg rounded-lg overflow-hidden bg-white">
           <iframe
-            src="https://quiz.konfhub.com/q/hertz-7aiml"
+            src="https://quiz.everestwebdeals.co/?form=bd33cdc432963ececeafb03ea64dba58"
             title="Hertz-7 Quiz"
             className="w-full h-full"
           ></iframe>
