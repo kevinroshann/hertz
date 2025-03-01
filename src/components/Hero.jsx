@@ -81,7 +81,8 @@ const Hero = () => {
           {/* <h2 className="text-4xl sm:text-6xl font-bold special-font">Event Starts In</h2> */}
           {/* <h1 className="special-font text-3xl sm:text-5xl  text-white">{countdown}</h1> */}
           <h1 className="special-font hero-heading text-white text-center bg-black bg-opacity-50 p-4 rounded-lg text-6xl md:text-8xl lg:text-9xl">
-        {countdown}
+        {/* {countdown} */}
+        {/* <h1></h1> */}
       </h1>
         </div>
 
