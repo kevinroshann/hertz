@@ -5,8 +5,9 @@ export default function GradingPage() {
   const [userLocation, setUserLocation] = useState(null);
   const [locationName, setLocationName] = useState("Fetching location...");
   
-  const eventLocation = { lat: 10.042589, lng: 76.328659 }; // Updated event location
-  const allowedRadius = 15; // 15 meters radius
+  // Updated event location
+  const eventLocation = { lat: 10.042589, lng: 76.328659 };
+  const allowedRadius = 15; // Increased tolerance to 15 meters
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -15,12 +16,11 @@ export default function GradingPage() {
           const { latitude, longitude } = position.coords;
           setUserLocation({ latitude, longitude });
 
-          // Calculate distance from event location
-          const distance = Math.round(getDistance(latitude, longitude, eventLocation.lat, eventLocation.lng));
-
+          // Calculate distance
+          const distance = getDistance(latitude, longitude, eventLocation.lat, eventLocation.lng);
           console.log(`User Location: ${latitude}, ${longitude}`);
           console.log(`Event Location: ${eventLocation.lat}, ${eventLocation.lng}`);
-          console.log(`Calculated Distance: ${distance} meters`);
+          console.log(`Calculated Distance: ${distance.toFixed(2)} meters`);
 
           setIsAllowed(distance <= allowedRadius);
           await fetchLocationName(latitude, longitude);
@@ -29,9 +29,10 @@ export default function GradingPage() {
           console.error("Geolocation error:", error);
           setIsAllowed(false);
         },
-        { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+        { enableHighAccuracy: true, timeout: 20000, maximumAge: 0 } // Increased timeout
       );
     } else {
+      console.error("Geolocation not supported.");
       setIsAllowed(false);
     }
   }, []);
@@ -52,7 +53,7 @@ export default function GradingPage() {
   }
 
   function getDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371e3; // Earth's radius in meters
+    const R = 6371e3; // Earth radius in meters
     const toRad = (angle) => (angle * Math.PI) / 180;
     const dLat = toRad(lat2 - lat1);
     const dLon = toRad(lon2 - lon1);
@@ -61,7 +62,7 @@ export default function GradingPage() {
       Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
       Math.sin(dLon / 2) * Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return Math.round(R * c); // Round to avoid small floating-point issues
+    return R * c;
   }
 
   return (
