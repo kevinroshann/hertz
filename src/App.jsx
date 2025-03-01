@@ -13,6 +13,7 @@ import Workshops from "./pages/Workshops";
 import ProjectExpo from "./pages/ProjectExpo";
 import Quiz from "./pages/Quiz";
 import Hackathon from "./pages/Hackathon";
+import Hero from "./pages/hackatontimerpage";
 import GradingPage from "./pages/GradingPage";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/Quiz" element={<Quiz />} /> {/* New Route */}
         <Route path="/Hackathon" element={<Hackathon />} />
         <Route path="/GradingPage" element={<GradingPage />} />
+        <Route path="/timer" element={<Hero />} />
       </Routes>
     </main>
   );

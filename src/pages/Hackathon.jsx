@@ -159,6 +159,7 @@ export default function Hackathon() {
       >
         Register Now
       </Button>
+ 
     </div>
   );
 }
