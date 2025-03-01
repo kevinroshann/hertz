@@ -5,7 +5,7 @@ export default function GradingPage() {
   const [userLocation, setUserLocation] = useState(null);
   const [locationName, setLocationName] = useState("Fetching location...");
   const eventLocation = { lat: 10.042766, lng: 76.328501 }; // Event location
-  const allowedRadius = 10; // meters
+  const allowedRadius = 15; // Increased tolerance to 15 meters
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -13,7 +13,12 @@ export default function GradingPage() {
         async (position) => {
           const { latitude, longitude } = position.coords;
           setUserLocation({ latitude, longitude });
-          const distance = getDistance(latitude, longitude, eventLocation.lat, eventLocation.lng);
+
+          // Calculate distance
+          const distance = Math.round(getDistance(latitude, longitude, eventLocation.lat, eventLocation.lng));
+
+          console.log(`User Distance: ${distance} meters`); // Debugging log
+
           setIsAllowed(distance <= allowedRadius);
           await fetchLocationName(latitude, longitude);
         },
