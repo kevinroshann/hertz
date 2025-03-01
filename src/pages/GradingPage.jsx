@@ -70,13 +70,14 @@ export default function GradingPage() {
       {isAllowed === null ? (
         <p className="text-lg sm:text-xl">Checking location...</p>
       ) : isAllowed ? (
-        <iframe
-          src="https://docs.google.com/forms/d/e/your-google-form-id/viewform?embedded=true"
-          width="100%"
-          height="800px"
-          className="border rounded-lg shadow-lg"
-          title="Grading Form"
-        ></iframe>
+        // <iframe
+        //   src="https://docs.google.com/forms/d/e/your-google-form-id/viewform?embedded=true"
+        //   width="100%"
+        //   height="800px"
+        //   className="border rounded-lg shadow-lg"
+        //   title="Grading Form"
+        // ></iframe>
+        <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__5HD4A1UNUZaWk1DVVpHQlhOOU9FSU1YU0lVTUw4RS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
       ) : (
         <div className="w-full max-w-lg">
           <p className="text-xl sm:text-2xl font-bold mt-4 sm:mt-6 text-center">
