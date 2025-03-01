@@ -4,8 +4,9 @@ export default function GradingPage() {
   const [isAllowed, setIsAllowed] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
   const [locationName, setLocationName] = useState("Fetching location...");
-  const eventLocation = { lat: 10.042766, lng: 76.328501 }; // Event location
-  const allowedRadius = 15; // Increased tolerance to 15 meters
+  
+  const eventLocation = { lat: 10.042589, lng: 76.328659 }; // Updated event location
+  const allowedRadius = 15; // 15 meters radius
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -14,10 +15,12 @@ export default function GradingPage() {
           const { latitude, longitude } = position.coords;
           setUserLocation({ latitude, longitude });
 
-          // Calculate distance
+          // Calculate distance from event location
           const distance = Math.round(getDistance(latitude, longitude, eventLocation.lat, eventLocation.lng));
 
-          console.log(`User Distance: ${distance} meters`); // Debugging log
+          console.log(`User Location: ${latitude}, ${longitude}`);
+          console.log(`Event Location: ${eventLocation.lat}, ${eventLocation.lng}`);
+          console.log(`Calculated Distance: ${distance} meters`);
 
           setIsAllowed(distance <= allowedRadius);
           await fetchLocationName(latitude, longitude);
@@ -49,7 +52,7 @@ export default function GradingPage() {
   }
 
   function getDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371e3; // Earth radius in meters
+    const R = 6371e3; // Earth's radius in meters
     const toRad = (angle) => (angle * Math.PI) / 180;
     const dLat = toRad(lat2 - lat1);
     const dLon = toRad(lon2 - lon1);
@@ -58,7 +61,7 @@ export default function GradingPage() {
       Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
       Math.sin(dLon / 2) * Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c;
+    return Math.round(R * c); // Round to avoid small floating-point issues
   }
 
   return (
@@ -87,7 +90,7 @@ export default function GradingPage() {
               <p className="text-lg sm:text-xl">Please move to the location given below to access the page.</p>
               <div className="w-full flex justify-center mt-4">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.54295155538557!2d76.32863749987466!3d10.042647915283634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c37738769d3%3A0x5ef54323a29bcbfb!2sCUSAT%20Student%20Amenity%20Centre!5e0!3m2!1sen!2sin!4v1740561740744!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.54295155538557!2d76.328659!3d10.042589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c37738769d3%3A0x5ef54323a29bcbfb!2sCUSAT%20Student%20Amenity%20Centre!5e0!3m2!1sen!2sin!4v1740561740744!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
