@@ -7,7 +7,7 @@ export default function GradingPage() {
   
   // Updated event location
   const eventLocation = { lat: 10.042589, lng: 76.328659 };
-  const allowedRadius = 15; // Increased tolerance to 15 meters
+  const allowedRadius = 18; // Increased tolerance to 18 meters to reduce GPS drift issues
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -29,7 +29,7 @@ export default function GradingPage() {
           console.error("Geolocation error:", error);
           setIsAllowed(false);
         },
-        { enableHighAccuracy: true, timeout: 20000, maximumAge: 0 } // Increased timeout
+        { enableHighAccuracy: true, timeout: 20000, maximumAge: 0 } // Forces fresh GPS fetch
       );
     } else {
       console.error("Geolocation not supported.");
@@ -70,17 +70,13 @@ export default function GradingPage() {
       {isAllowed === null ? (
         <p className="text-lg sm:text-xl">Checking location...</p>
       ) : isAllowed ? (
-        // <iframe
-        //   src="https://docs.google.com/forms/d/e/your-google-form-id/viewform?embedded=true"
-        //   width="100%"
-        //   height="800px"
-        //   className="border rounded-lg shadow-lg"
-        //   title="Grading Form"
-        // ></iframe>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUUC6MyohVllwpMJt8RlCJREGbLSlnhEfhbS5Iu4CIN0dOtw/viewform?embedded=true" width="100%"
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdUUC6MyohVllwpMJt8RlCJREGbLSlnhEfhbS5Iu4CIN0dOtw/viewform?embedded=true"
+          width="100%"
           height="800px"
           className="border rounded-lg shadow-lg"
-          title="Grading Form"> </iframe>
+          title="Grading Form"
+        ></iframe>
       ) : (
         <div className="w-full max-w-lg">
           <p className="text-xl sm:text-2xl font-bold mt-4 sm:mt-6 text-center">
@@ -92,7 +88,11 @@ export default function GradingPage() {
               <p className="text-lg sm:text-xl break-words">
                 You are currently at: <strong>{locationName}</strong>
               </p>
-              <p className="text-lg sm:text-xl">Please move to the location given below to access the page.</p>
+              <p className="text-lg sm:text-xl text-yellow-400 font-bold">
+                If you are near the location but unable to access the page, please try refreshing or move slightly.
+              </p>
+              <p className="text-lg sm:text-xl">Ensure GPS is enabled and set to high accuracy.</p>
+
               <div className="w-full flex justify-center mt-4">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.54295155538557!2d76.328659!3d10.042589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c37738769d3%3A0x5ef54323a29bcbfb!2sCUSAT%20Student%20Amenity%20Centre!5e0!3m2!1sen!2sin!4v1740561740744!5m2!1sen!2sin"
@@ -123,3 +123,4 @@ export default function GradingPage() {
     </div>
   );
 }
+
