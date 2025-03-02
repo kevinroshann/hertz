@@ -77,7 +77,7 @@ export default function GradingPage() {
         //   className="border rounded-lg shadow-lg"
         //   title="Grading Form"
         // ></iframe>
-        <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__5HD4A1UNUZaWk1DVVpHQlhOOU9FSU1YU0lVTUw4RS4u&embed=true" width="100%"
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUUC6MyohVllwpMJt8RlCJREGbLSlnhEfhbS5Iu4CIN0dOtw/viewform?embedded=true" width="100%"
           height="800px"
           className="border rounded-lg shadow-lg"
           title="Grading Form"> </iframe>
